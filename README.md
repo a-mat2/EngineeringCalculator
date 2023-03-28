@@ -1,0 +1,1 @@
+EngineeringCalculator is a desktop application, which helps to make simple engineering calculations. It supports us in properly select a safety valve, expansion vessel, circulation pump, diamater of pipes and design a gas cabinet with correct ventilation.
