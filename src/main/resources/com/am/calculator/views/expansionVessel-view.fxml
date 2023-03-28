@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.am.calculator.expansionVessel.ExpansionVesselController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="730.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="400.0" prefWidth="206.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="25.6" text="Moc kotła = " />
+                  <Label prefHeight="25.6" text="Temp. zasilania = " />
+                  <Label prefHeight="25.6" text="Ciśnienie końcowe = " />
+                  <Label prefHeight="25.6" text="Wysokość statyczna = " />
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="363.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="installationPower" />
+                  <ComboBox fx:id="flowTemperature" onAction="#selectFlowTemperature" prefHeight="26.0" prefWidth="306.0" />
+                  <ComboBox fx:id="finalPressure" onAction="#selectFinalPressure" prefHeight="26.0" prefWidth="306.0" />
+                  <TextField fx:id="staticHeight" />
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="92.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="25.6" text="kW" />
+                  <Label prefHeight="25.6" text="°C" />
+                  <Label prefHeight="25.6" text="bar" />
+                  <Label prefHeight="26.0" prefWidth="34.0" text="mH₂O" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="290.0">
+               <children>
+                  <Label text="Typ instalacji:" />
+                  <ComboBox fx:id="heatingType" onAction="#selectHeatingType" prefHeight="26.0" prefWidth="306.0" />
+                  <HBox prefHeight="179.0" prefWidth="290.0">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="206.0" prefWidth="187.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="25.6" text="Ilość wody na jednostkę mocy = " />
+                              <Label prefHeight="25.6" text="Pojemność wodna = " />
+                              <Label prefHeight="25.6" text="Ciśnienie wstępne = " />
+                              <Label prefHeight="25.6" text="Objętość wzbiorcza = " />
+                              <Label prefHeight="25.6" text="Współczynnik efektywności = " />
+                              <Label prefHeight="25.6" text="Wymagana pojemność naczynia = " />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="70.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="waterPerPower" prefHeight="25.6" text="Label" />
+                              <Label fx:id="waterCapacity" prefHeight="25.6" text="Label" />
+                              <Label fx:id="initialPressure" prefHeight="25.6" text="Label" />
+                              <Label fx:id="expansionVolume" prefHeight="25.6" text="Label" />
+                              <Label fx:id="effectivenessRatio" prefHeight="25.6" text="Label" />
+                              <Label fx:id="requiredVesselCapacity" prefHeight="25.6" text="Label" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="200.0" prefWidth="670.0">
+         <children>
+            <ImageView fitHeight="194.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/staticHeight.JPG" />
+               </image>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets left="60.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

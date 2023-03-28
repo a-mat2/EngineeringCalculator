@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="400.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.am.calculator.gasCabinetVentilation.GasCabinetVentilationController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="196.0" spacing="10.0">
+         <children>
+            <Label prefHeight="25.6" text="Szerokość szafki A =" />
+            <Label prefHeight="25.6" text="Głębokość szafki B =" />
+            <Label prefHeight="25.6" text="Średnica otworu d =" />
+            <Label prefHeight="25.6" text="Min. ilość otworów =" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="80.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <TextField fx:id="cabinetWidth" alignment="CENTER" />
+            <TextField fx:id="cabinetDepth" alignment="CENTER" />
+            <TextField fx:id="holeDiameter" alignment="CENTER" />
+            <Label fx:id="numberOfHoles" prefHeight="25.6" text="Label" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="58.0" spacing="10.0">
+         <children>
+            <Label prefHeight="25.6" text="[mm]" />
+            <Label prefHeight="25.6" text="[mm]" />
+            <Label prefHeight="25.6" text="[mm]" />
+            <Label prefHeight="25.6" text="[szt.]" />
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="345.0">
+         <children>
+            <ImageView fx:id="cabinetImage" fitHeight="322.0" fitWidth="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/gasCabinet.JPG" />
+               </image>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</HBox>

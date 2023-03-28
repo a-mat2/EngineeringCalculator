@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.am.calculator.waterCalculator.WaterCalculatorController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Label prefHeight="25.6" text="Umywalka" />
+            <Label prefHeight="25.6" text="Zlewozmywak" />
+            <Label prefHeight="25.6" text="Wanna" />
+            <Label prefHeight="25.6" text="Natrysk" />
+            <Label prefHeight="25.6" text="Pralka" />
+            <Label prefHeight="25.6" text="Zmywarka" />
+            <Label prefHeight="25.6" text="Pisuar" />
+            <Label prefHeight="25.6" text="Płuczka zb." />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="50.0" spacing="10.0">
+         <children>
+            <TextField fx:id="washbasin" alignment="CENTER" prefWidth="50.0" text="0" VBox.vgrow="NEVER" />
+            <TextField fx:id="sink" alignment="CENTER" text="0" />
+            <TextField fx:id="bath" alignment="CENTER" text="0" />
+            <TextField fx:id="shower" alignment="CENTER" text="0" />
+            <TextField fx:id="washingMachine" alignment="CENTER" text="0" />
+            <TextField fx:id="dishwasher" alignment="CENTER" text="0" />
+            <TextField fx:id="urinal" alignment="CENTER" text="0" />
+            <TextField fx:id="toiletBowl" alignment="CENTER" text="0" />
+            <Button mnemonicParsing="false" onAction="#resetAmount" text="Reset" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="223.0">
+         <children>
+            <Label text="Rodzaj budynku:" />
+            <ComboBox fx:id="buildingType" onAction="#selectBuildingType" prefWidth="150.0" />
+            <Label text="Rodzaj rury:">
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="pipeType" onAction="#selectPipeType" prefWidth="150.0" />
+            <HBox alignment="CENTER" prefHeight="17.0" prefWidth="250.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="48.0" prefWidth="128.0" text="Max. prędkość [m/s]:" />
+                  <TextField fx:id="maxSpeed" alignment="CENTER" prefHeight="26.0" prefWidth="52.0" text="1.5" />
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" prefHeight="400.0" prefWidth="71.0" spacing="20.0">
+         <children>
+            <Label text="Wyniki:" />
+            <Label text="∑qn =" />
+            <Label text="Qobl =" />
+            <Label text="d = " />
+            <Label text="v =" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="154.0" spacing="20.0">
+         <children>
+            <Label />
+            <Label fx:id="normativeOutflow" text="Label" />
+            <Label fx:id="waterFlux" text="Label" />
+            <Label fx:id="diameter" text="Label" />
+            <Label fx:id="flowSpeed" text="Label" />
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

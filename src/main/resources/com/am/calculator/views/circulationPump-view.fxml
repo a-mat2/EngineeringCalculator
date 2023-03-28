@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="400.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.am.calculator.circulationPump.CirculationPumpController">
+   <children>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="76.0" prefWidth="730.0">
+         <children>
+            <Label text="Wydajność">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Wysokość podnoszenia">
+               <HBox.margin>
+                  <Insets left="220.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="730.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="330.0" prefWidth="162.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="25.6" text="Moc kotła =" />
+                  <Label prefHeight="25.6" text="Temp. zasilania =" />
+                  <Label prefHeight="25.6" text="Temp. powrotu =" />
+                  <Label prefHeight="25.6" text="Wydajność pompy =" />
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="installationPower" alignment="CENTER" />
+                  <TextField fx:id="flowTemperature" alignment="CENTER" />
+                  <TextField fx:id="returnTemperature" alignment="CENTER" />
+                  <Label fx:id="pumpPerformance" prefHeight="25.6" text="Label" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="330.0" prefWidth="86.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="25.6" text="kW" />
+                  <Label prefHeight="25.6" text="°C" />
+                  <Label prefHeight="25.6" text="°C" />
+                  <Label prefHeight="25.6" text="m³/h" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="330.0" prefWidth="208.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="25.6" text="Liniowa strata ciśnienia =" />
+                  <Label prefHeight="25.6" text="Długość przewodów (zas. + pow.) =" />
+                  <Label prefHeight="25.6" text="Współczynnik oporów miejscowych =" />
+                  <Label prefHeight="25.6" text="Wysokość podnoszenia pompy =" />
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="linearPressureDrop" alignment="CENTER" />
+                  <TextField fx:id="pipesLength" alignment="CENTER" />
+                  <TextField fx:id="localResistanceFactor" alignment="CENTER" />
+                  <Label fx:id="pumpHead" prefHeight="25.6" text="Label" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="25.6" text="Pa/m" />
+                  <Label prefHeight="25.6" text="m" />
+                  <Label prefHeight="25.6" />
+                  <Label prefHeight="25.6" text="m" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

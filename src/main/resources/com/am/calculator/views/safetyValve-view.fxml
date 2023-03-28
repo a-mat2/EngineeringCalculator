@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.am.calculator.safetyValve.SafetyValveController">
+   <children>
+      <VBox alignment="CENTER_RIGHT" prefHeight="400.0" prefWidth="360.0" spacing="20.0">
+         <children>
+            <Label prefHeight="25.6" text="Maks. moc kotła =" />
+            <Label prefHeight="25.6" text="Ciśnienie początku otwarcia =" />
+            <Label text="Zawór" />
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="64.0" spacing="20.0">
+         <children>
+            <TextField fx:id="gasBoilerPower" />
+            <ComboBox fx:id="openingPressure" onAction="#selectOpeningPressure" prefWidth="150.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ComboBox>
+            <Label fx:id="safetyValveDiameter" text="Label" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="84.0" spacing="20.0">
+         <children>
+            <Label prefHeight="25.6" text="kW" />
+            <Label prefHeight="25.6" text="bar" />
+            <Label />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
